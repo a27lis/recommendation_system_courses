@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рекомендательная система для курсов</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+    <!-- Шапка и заголовки -->
+    <h1 class="color">Coursera Course Recommendation System</h1>
+    <h4>Найди похожий курс из датасета, в котором свыше 3000 курсов Corsera</h4>
+
+    <!-- Поиск -->
+    <div class="form-courses">
+        <label for="formControlSelect">Введи или выбери курс, который нравится</label>
+        <select class="form-select" id="formControlSelect">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+
+    <!-- Рекомендации -->
+    <button type="button" class="btn btn-primary btn-show" id="show-btn">Показать рекомендованные курсы</button>  
+    <div class="courses-block" id="courses-block">
+      <button type="button" class="btn btn-link course">Course 1 long name or description</button>
+      <button type="button" class="btn btn-link course">Course 2 long name or description</button>
+      <button type="button" class="btn btn-link course">Course 3 short name</button>
+      <button type="button" class="btn btn-link course">Course 4 long name or description</button>
+    </div>
+    
+</body>
+<script src="show.js"></script>
+</html>
