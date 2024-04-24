@@ -42,3 +42,33 @@ h4 {
     text-decoration: none;
     color: black;
 }
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content div {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content div:hover {
+  background-color: #ddd;
+}
+
+#myInput:focus + .dropdown-content {
+  display: block;
+}
+.input_course {
+    width: 900px
+}
