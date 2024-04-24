@@ -25,6 +25,7 @@ h4 {
     transform: translate(-50%, 0); 
 }
 
+
 .courses-block {
     margin-top: 20px;
     display: none;
@@ -45,30 +46,33 @@ h4 {
 
 
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f6f6f6;
-  min-width: 230px;
-  overflow: auto;
-  border: 1px solid #ddd;
-  z-index: 1;
+.input-course {
+    width: 855px
 }
 
-.dropdown-content div {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+
+
+.ui-autocomplete {
+padding: 16px !important;
+    width: 855px !important;
+    color: black !important;
+
+
 }
 
-.dropdown-content div:hover {
-  background-color: #ddd;
+.ui-menu-item, .ui-menu-item:hover,
+.ui-menu-item a, .ui-menu-item a:hover
+{
+text-align: center;
+    background: #ffffff none no-repeat;
+    color: black !important;
+    text-decoration: none;
+    padding:0;
+    margin:4;
+    display:block;
+    border:0;border-collapse:collapse;
+    cursor: pointer;
 }
 
-#myInput:focus + .dropdown-content {
-  display: block;
-}
-.input_course {
-    width: 900px
-}
+
+
