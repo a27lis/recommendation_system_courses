@@ -1,8 +1,4 @@
-import os
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 print('Dependencies Imported')
 
@@ -35,13 +31,10 @@ new_df.rename(columns={'Course Name': 'course_name'}, inplace=True)
 new_df['tags'] = new_df['tags'].apply(lambda x: x.lower())
 
 from sklearn.feature_extraction.text import CountVectorizer
-
 cv = CountVectorizer(max_features=5000, stop_words='english')
 vectors = cv.fit_transform(new_df['tags']).toarray()
 
-import nltk
 from nltk.stem.porter import PorterStemmer
-
 ps = PorterStemmer()
 
 
