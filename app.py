@@ -6,7 +6,7 @@ import ml_model.model
 name = "main"
 app = Flask(name)
 
-data = pd.read_csv("C:/src/recommendation_system/BigData_project/data/Coursera.csv")
+data = pd.read_csv("data/Coursera.csv")
 
 
 @app.route('/', methods=["POST", "GET"])

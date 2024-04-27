@@ -6,7 +6,7 @@ import seaborn as sns
 
 print('Dependencies Imported')
 
-data = pd.read_csv("C:/src/recommendation_system/BigData_project/data/Coursera.csv")
+data = pd.read_csv("data/Coursera.csv")
 data = data[['Course Name', 'Difficulty Level', 'Course Description', 'Skills']]
 print(data.shape)
 
