@@ -18,7 +18,7 @@ data['Course Description'] = data['Course Description'].str.replace(':', '')
 data['Course Description'] = data['Course Description'].str.replace('(', '')
 data['Course Description'] = data['Course Description'].str.replace(')', '')
 
-#removing paranthesis from skills columns
+# removing paranthesis from skills columns
 data['Skills'] = data['Skills'].str.replace('(', '')
 data['Skills'] = data['Skills'].str.replace(')', '')
 
@@ -31,14 +31,16 @@ new_df.rename(columns={'Course Name': 'course_name'}, inplace=True)
 new_df['tags'] = new_df['tags'].apply(lambda x: x.lower())
 
 from sklearn.feature_extraction.text import CountVectorizer
+
 cv = CountVectorizer(max_features=5000, stop_words='english')
 vectors = cv.fit_transform(new_df['tags']).toarray()
 
 from nltk.stem.porter import PorterStemmer
+
 ps = PorterStemmer()
 
 
-#defining the stemming function
+# defining the stemming function
 def stem(text):
     y = []
 
@@ -48,7 +50,7 @@ def stem(text):
     return " ".join(y)
 
 
-new_df['tags'] = new_df['tags'].apply(stem)  #applying stemming on the tags column
+new_df['tags'] = new_df['tags'].apply(stem)  # applying stemming on the tags column
 
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -64,5 +66,3 @@ def recommend(course):
     for i in course_list:
         result.append(new_df.iloc[i[0]].course_name)
     return result
-
-
